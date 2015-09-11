@@ -1,1 +1,27 @@
+html, body {
+	background: #eee;
+}
 
+h1, h2, h3, h4, h5, p, a {
+	color: #222;
+}
+
+a {
+	color: #333;
+}
+
+a:hover {
+	color: #555;
+}
+
+div#dragbox {
+	width: 400px;
+	height: 200px;
+	border: 1px solid #444;
+	border-radius: 6px;
+	background: #ddd;
+}
+
+.hidden {
+	display: none;
+}
