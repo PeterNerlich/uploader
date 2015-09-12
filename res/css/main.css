@@ -15,7 +15,7 @@ a:hover {
 }
 
 div#dragbox {
-	width: 400px;
+	width: 404px;
 	height: 200px;
 	border: 1px solid #444;
 	border-radius: 6px;
@@ -37,6 +37,27 @@ div#dragbox.activated #dragmessage {
 }
 div#dragbox.error #dragmessage {
 	color: #822;
+}
+
+div#filecue {
+	width: 200px;
+	height: 200px;
+	float: left;
+	margin-top: 6px;
+	margin-right: 1px;
+	border: 1px solid #554;
+	border-radius: 6px 2px 2px 6px;
+	background: #eec;
+}
+div#filesfinished {
+	width: 200px;
+	height: 200px;
+	float: left;
+	margin-top: 6px;
+	margin-left: 1px;
+	border: 1px solid #464;
+	border-radius: 2px 6px 6px 2px;
+	background: #cec;
 }
 
 .hidden {
