@@ -14,24 +14,24 @@ window.onload = function(){
 	dm = document.getElementById('dragmessage');
 	dm.innerHTML = 'Drag your images here!';
 	if(window.FileReader) { 
-		d.addEventListener('dragenter', function(e){
+		addEventHandler(d, 'dragenter', function(e){
 			pd(e);
 			console.log('dragenter()');
 			d.classList.add('activated');
 			dm.innerHTML = 'Drop your images here!';
 		});
-		d.addEventListener('dragleave', function(e){
+		addEventHandler(d, 'dragleave', function(e){
 			pd(e);
 			console.log('dragleave()');
 			d.classList.remove('activated');
 			dm.innerHTML = 'Drag your images here!';
 		});
-		d.addEventListener('dragover', function(e){
+		addEventHandler(d, 'dragover', function(e){
 			pd(e);
 			console.log('dragover()');
 			d.classList.add('activated');
 		});
-		d.addEventListener('drop', function(e){
+		addEventHandler(d, 'drop', function(e){
 			pd(e);
 			console.log('drop()');
 			d.classList.remove('activated');
@@ -42,3 +42,16 @@ window.onload = function(){
 		dm.innerHTML = 'Your Browser doesn\'t support the HTML5 File Reader.';
 	}
 };
+
+function addEventHandler(obj, evt, handler) {
+    if(obj.addEventListener) {
+        // W3C method
+        obj.addEventListener(evt, handler, false);
+    } else if(obj.attachEvent) {
+        // IE method.
+        obj.attachEvent('on'+evt, handler);
+    } else {
+        // Old school method.
+        obj['on'+evt] = handler;
+    }
+}
