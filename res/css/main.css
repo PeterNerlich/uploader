@@ -21,6 +21,23 @@ div#dragbox {
 	border-radius: 6px;
 	background: #ddd;
 }
+div#dragbox.activated {
+	border: 1px solid #4a4;
+	background: #dfd;
+}
+div#dragbox.error {
+	border: 1px solid #a44;
+	background: #fdd;
+}
+div#dragbox #dragmessage {
+	color: #222;
+}
+div#dragbox.activated #dragmessage {
+	color: #262;
+}
+div#dragbox.error #dragmessage {
+	color: #822;
+}
 
 .hidden {
 	display: none;
