@@ -29,14 +29,52 @@ div#dragbox.error {
 	border: 1px solid #a44;
 	background: #fdd;
 }
+
 div#dragbox #dragmessage {
 	color: #222;
+	text-align: center;
 }
 div#dragbox.activated #dragmessage {
 	color: #262;
 }
 div#dragbox.error #dragmessage {
 	color: #822;
+}
+
+div.fileselectorbox {
+	position: relative;
+	left: 50%;
+	margin-left: -100px;
+	width: 200px;
+	height: 50px;
+	overflow: hidden;
+}
+div#dragbox.activated .fileselectorbox, div#dragbox.error .fileselectorbox {
+	opacity: 0.3;
+}
+
+.fileselectorbox .fakebox {
+	width: calc(100% - 2px);
+	height: calc(100% - 2px);
+	background: #aea;
+	border: 1px solid #8a8;
+	border-radius: 8px;
+	z-index: 1;
+}
+.fileselectorbox .fakebox p {
+	color: #464;
+	text-align: center;
+}
+
+div#dragbox .fileselectorbox #fileselector {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	opacity: 0;
 }
 
 div#filecue {
