@@ -14,76 +14,6 @@ a:hover {
 	color: #555;
 }
 
-div#dragbox {
-	width: 804px;
-	height: 200px;
-	border: 1px solid #444;
-	border-radius: 6px;
-	background: #ddd;
-}
-div#dragbox.activated {
-	border: 1px solid #4a4;
-	background: #dfd;
-}
-div#dragbox.error {
-	border: 1px solid #a44;
-	background: #fdd;
-}
-
-div#dragbox #dragmessage {
-	color: #222;
-	text-align: center;
-}
-div#dragbox.activated #dragmessage {
-	color: #262;
-}
-div#dragbox.error #dragmessage {
-	color: #822;
-}
-
-div.fileselectorbox {
-	position: relative;
-	left: 50%;
-	margin-left: -100px;
-	width: 200px;
-	height: 50px;
-	overflow: hidden;
-}
-div#dragbox.activated .fileselectorbox, div#dragbox.error .fileselectorbox {
-	opacity: 0.3;
-}
-
-div#dragbox .fileselectorbox #fileselector {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 2;
-	opacity: 0;
-}
-
-.fileselectorbox .fakebox {
-	width: calc(100% - 2px);
-	height: calc(100% - 2px);
-	background: #aea;
-	border: 1px solid #8a8;
-	border-radius: 8px;
-	z-index: 1;
-}
-.fileselectorbox .fakebox:hover, div#dragbox .fileselectorbox #fileselector:hover + .fakebox {
-	background: #afa;
-	border: 1px solid #8b8;
-}
-.fileselectorbox .fakebox p {
-	color: #464;
-	text-align: center;
-}
-.fileselectorbox .fakebox:hover p, div#dragbox .fileselectorbox #fileselector:hover + .fakebox p {
-	color: #585;
-}
-
 div.cue {
 	width: 400px;
 	min-height: 10px;
@@ -92,18 +22,6 @@ div.cue {
 	border: 1px solid #555;
 	border-radius: 6px;
 	background: #ddd;
-}
-div#filecue {
-	margin-right: 1px;
-	border: 1px solid #554;
-	border-radius: 6px 2px 2px 6px;
-	background: #eec;
-}
-div#filesfinished {
-	margin-left: 1px;
-	border: 1px solid #464;
-	border-radius: 2px 6px 6px 2px;
-	background: #cec;
 }
 
 .cue ul {

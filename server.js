@@ -13,6 +13,8 @@ var server = http.createServer(function (req, res) {
 	} else if(req.url.match(/^\/upload/)) {
 		if (req.url.match(/^\/upload\/script.js$/)) {
 			sendfile('res/js/upload.js',res);
+		} else if (req.url.match(/^\/upload\/style.css$/)) {
+			sendfile('res/js/upload.css',res);
 		} else if (req.url.match(/^\/upload$/) || req.url.match(/^\/upload\/$/)) {
 			sendfile('res/html/upload.html',res);
 		} else {
