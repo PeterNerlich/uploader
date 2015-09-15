@@ -13,11 +13,11 @@ window.onload = function(){
 	addEventHandler(document, 'dragover', pd);
 	addEventHandler(document, 'drop', pd);
 
-	d = document.getElementById('dragbox');
+	var d = document.getElementById('dragbox');
 	d.classList.remove('activated');
-	dm = document.getElementById('dragmessage');
+	var dm = document.getElementById('dragmessage');
 	dm.innerHTML = 'Drag your images here!';
-	fs = document.getElementById('fileselector');
+	var fs = document.getElementById('fileselector');
 	if(window.FileReader) { 
 		addEventHandler(d, 'dragenter', function(e){
 			e = e || window.event; // get window.event if e argument missing (in IE)
@@ -48,12 +48,12 @@ window.onload = function(){
 			//addFiles(e);
 			addFiles(e.dataTransfer.files);
 		});
-		addEventHandler(fileselector, 'change', function(e){
+		addEventHandler(fs, 'change', function(e){
 			e = e || window.event; // get window.event if e argument missing (in IE)
 			pd(e);
 			console.log('<input> change()');
 			addFiles(e.target.files);
-			fileselector.value = '';
+			fs.value = '';
 		});
 	} else {
 		d.classList.add('error');
@@ -61,13 +61,11 @@ window.onload = function(){
 	}
 };
 
-var dt = null;
-
 function addFiles(files) {
 	console.log('addFiles()');
 	var list = document.getElementById('filecue').getElementsByTagName('ul')[0];
 
-	//dt = e.dataTransfer;
+	//var dt = e.dataTransfer;
 	//console.log(dt);
 	//var files = dt.files;
 	var loadedfiles = 0;
