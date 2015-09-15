@@ -15,7 +15,7 @@ a:hover {
 }
 
 div#dragbox {
-	width: 404px;
+	width: 804px;
 	height: 200px;
 	border: 1px solid #444;
 	border-radius: 6px;
@@ -53,19 +53,6 @@ div#dragbox.activated .fileselectorbox, div#dragbox.error .fileselectorbox {
 	opacity: 0.3;
 }
 
-.fileselectorbox .fakebox {
-	width: calc(100% - 2px);
-	height: calc(100% - 2px);
-	background: #aea;
-	border: 1px solid #8a8;
-	border-radius: 8px;
-	z-index: 1;
-}
-.fileselectorbox .fakebox p {
-	color: #464;
-	text-align: center;
-}
-
 div#dragbox .fileselectorbox #fileselector {
 	width: 100%;
 	height: 100%;
@@ -77,25 +64,60 @@ div#dragbox .fileselectorbox #fileselector {
 	opacity: 0;
 }
 
-div#filecue {
-	width: 200px;
-	height: 200px;
+.fileselectorbox .fakebox {
+	width: calc(100% - 2px);
+	height: calc(100% - 2px);
+	background: #aea;
+	border: 1px solid #8a8;
+	border-radius: 8px;
+	z-index: 1;
+}
+.fileselectorbox .fakebox:hover, div#dragbox .fileselectorbox #fileselector:hover + .fakebox {
+	background: #afa;
+	border: 1px solid #8b8;
+}
+.fileselectorbox .fakebox p {
+	color: #464;
+	text-align: center;
+}
+.fileselectorbox .fakebox:hover p, div#dragbox .fileselectorbox #fileselector:hover + .fakebox p {
+	color: #585;
+}
+
+div.cue {
+	width: 400px;
+	min-height: 10px;
 	float: left;
 	margin-top: 6px;
+	border: 1px solid #555;
+	border-radius: 6px;
+	background: #ddd;
+}
+div#filecue {
 	margin-right: 1px;
 	border: 1px solid #554;
 	border-radius: 6px 2px 2px 6px;
 	background: #eec;
 }
 div#filesfinished {
-	width: 200px;
-	height: 200px;
-	float: left;
-	margin-top: 6px;
 	margin-left: 1px;
 	border: 1px solid #464;
 	border-radius: 2px 6px 6px 2px;
 	background: #cec;
+}
+
+.cue ul {
+	margin: 0;
+	padding: 0 3px;
+	list-style: none;
+}
+.cue li {
+	margin: 3px 0;
+	background: #fc5;
+	border-radius: 5px;
+}
+.cue li p {
+	margin: 0;
 }
 
 .hidden {
